@@ -32,9 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  inventory:
-    # Applies to all files under models/example/
+  dbt_inventory_analytics:
     staging:
-      +materialized: view
+        inventory:
+          +materialized: view
     marts:
       +materialized: table
